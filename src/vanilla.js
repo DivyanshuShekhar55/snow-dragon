@@ -46,4 +46,20 @@ const storeLogic = (creationObject) => {
     // send change event to all the subscribed listeners
     listeners.forEach((listener) => listener(state, prevState));
   };
+
+  const getState = () => state;
+
+  const getInitialState = () => initialState;
+
+  const subscribe = (listener) => {
+    listeners.add(listener);
+
+    // unsubscribe (like on omUnmounts)
+    return () => listeners.delete(listener);
+  };
+
+  const api = { setState, getState, getInitialState, subscribe };
+  const initialState = (state = createState(setState, getState, api));
+
+  return api;
 };
