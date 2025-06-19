@@ -1,5 +1,5 @@
 {
-  "name": "dragon",
+  "name": "snow-dragon",
   "version": "0.0.1",
   "description": "most minimal client-side state manager for vanilla-js and react projects",
   "main": "index.js",
@@ -10,10 +10,13 @@
     "type": "git",
     "url": "git+https://github.com/DivyanshuShekhar55/dragon.git"
   },
-  "author": "DivyanshuShekhar55",
+  "author": "Divyanshu Shekhar",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/DivyanshuShekhar55/dragon/issues"
   },
-  "homepage": "https://github.com/DivyanshuShekhar55/dragon#readme"
+  "homepage": "https://github.com/DivyanshuShekhar55/dragon#readme",
+  "devDependencies": {
+    "rollup": "^4.44.0"
+  }
 }
