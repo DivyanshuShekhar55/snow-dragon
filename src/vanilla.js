@@ -59,7 +59,10 @@ const storeLogic = (creationObject) => {
   };
 
   const api = { setState, getState, getInitialState, subscribe };
-  const initialState = (state = createState(setState, getState, api));
+  const initialState = (state = creationObject(setState, getState, api));
 
   return api;
 };
+
+export const createStore = (creationObject) =>
+  creationObject ? storeLogic(creationObject) : storeLogic;
