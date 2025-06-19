@@ -10,12 +10,44 @@
     "type": "git",
     "url": "git+https://github.com/DivyanshuShekhar55/dragon.git"
   },
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "react-native": {
+        "default": "./index.js"
+      },
+      "import": {
+        "default": "./esm/index.mjs"
+      },
+      "default": {
+        "default": "./index.js"
+      }
+    },
+    "./*": {
+      "react-native": {
+        "default": "./*.js"
+      },
+      "import": {
+        "default": "./esm/*.mjs"
+      },
+      "default": {
+        "default": "./*.js"
+      }
+    }
+  },
   "author": "Divyanshu Shekhar",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/DivyanshuShekhar55/dragon/issues"
   },
   "homepage": "https://github.com/DivyanshuShekhar55/dragon#readme",
+  "keywords": [
+    "react",
+    "state",
+    "management",
+    "manager",
+    "store"
+  ],
   "devDependencies": {
     "@rollup/plugin-alias": "^5.1.1",
     "@rollup/plugin-node-resolve": "^16.0.1",
