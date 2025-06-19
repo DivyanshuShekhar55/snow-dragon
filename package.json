@@ -25,5 +25,13 @@
     "prettier": "^3.5.3",
     "rollup": "^4.44.0",
     "rollup-plugin-esbuild": "^6.2.1"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    }
   }
 }
