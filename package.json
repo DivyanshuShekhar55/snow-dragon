@@ -1,15 +1,14 @@
 {
   "name": "snow-dragon",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "most minimal client-side state manager for vanilla-js and react projects",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/DivyanshuShekhar55/dragon.git"
   },
+  "private": true,
+  "type": "commonjs",
   "exports": {
     "./package.json": "./package.json",
     ".": {
@@ -48,15 +47,39 @@
     "manager",
     "store"
   ],
+  "scripts": {
+    "prebuild": "shx rm -rf dist",
+    "clean": "shx rm -rf dist",
+    "build": "npm run clean && npm run build:base && npm run build:vanilla && npm run build:react && npm run postbuild",
+    "build:base": "rollup -c",
+    "build:vanilla": "rollup -c --config-vanilla",
+    "build:react": "rollup -c --config-react",
+    "postbuild": "npm run copy",
+    "copy": "shx cp -r dist/src/* dist/esm && shx cp -r dist/src/* dist && shx rm -rf dist/src && shx cp package.json README.md LICENSE dist && json -I -f dist/package.json -e \"this.private=false; this.devDependencies=undefined; this.optionalDependencies=undefined; this.scripts=undefined; this.prettier=undefined;\"",
+    "fix": "npm run fix:lint && npm run fix:format",
+    "fix:format": "prettier . --write",
+    "fix:lint": "eslint . --fix",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "prettier": {
+    "semi": true,
+    "singleQuote": false
+  },
   "devDependencies": {
+    "@eslint/js": "^9.29.0",
     "@rollup/plugin-alias": "^5.1.1",
     "@rollup/plugin-node-resolve": "^16.0.1",
     "@rollup/plugin-replace": "^6.0.2",
     "@rollup/plugin-typescript": "^12.1.3",
     "eslint": "^9.29.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "json": "^11.0.0",
     "prettier": "^3.5.3",
     "rollup": "^4.44.0",
-    "rollup-plugin-esbuild": "^6.2.1"
+    "rollup-plugin-esbuild": "^6.2.1",
+    "shx": "^0.4.0"
   },
   "peerDependencies": {
     "react": ">=18.0.0"
