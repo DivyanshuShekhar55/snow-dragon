@@ -48,7 +48,7 @@
     "store"
   ],
   "files": [
-    "**"
+    "dist"
   ],
   "scripts": {
     "prebuild": "shx rm -rf dist",
