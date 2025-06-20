@@ -12,7 +12,7 @@ const storeLogic = (creationObject) => {
     // In libraries like Zustand it would fire the whole set logic
     // In others we will do a deep equality check and prevent whole logic from running
 
-    if (!replace && typeof newState == "object" && newState !== null) {
+    if (!shouldReplace && typeof newState == "object" && newState !== null) {
       const hasChanges = Object.keys(newState).some(
         (key) => !Object.is(newState[key], state[key])
       );
@@ -22,7 +22,7 @@ const storeLogic = (creationObject) => {
 
     // apply changes
     const prevState = state;
-    switch (replace) {
+    switch (shouldReplace) {
       case undefined:
         if (typeof newState !== "object" || newState === null) {
           state = newState;

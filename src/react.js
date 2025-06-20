@@ -4,7 +4,7 @@ import React from "react";
 export const create = (creationObject) => reactStoreLogic(creationObject);
 
 const reactStoreLogic = (creationObject) => {
-  api = createStore(creationObject);
+  const api = createStore(creationObject);
   const useBoundStore = (selector) => useStore(api, selector);
 
   // return value is only the current state
