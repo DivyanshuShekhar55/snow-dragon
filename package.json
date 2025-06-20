@@ -2,26 +2,19 @@
   "name": "snow-dragon",
   "version": "1.0.3",
   "description": "most minimal client-side state manager for vanilla-js and react projects",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "module": "dist/esm/index.mjs",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/DivyanshuShekhar55/dragon.git"
   },
   "private": false,
-  "type": "commonjs",
-  "exports": {
-    "./package.json": "./package.json",
-    ".": {
-      "react-native": "./index.js",
-      "import": "./esm/index.mjs",
-      "default": "./index.js"
-    },
-    "./*": {
-      "react-native": "./*.js",
-      "import": "./esm/*.mjs",
-      "default": "./*.js"
-    }
-  },
   "author": "Divyanshu Shekhar",
   "license": "MIT",
   "bugs": {
