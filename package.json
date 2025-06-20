@@ -7,7 +7,7 @@
     "type": "git",
     "url": "git+https://github.com/DivyanshuShekhar55/dragon.git"
   },
-  "private": true,
+  "private": false,
   "type": "commonjs",
   "exports": {
     "./package.json": "./package.json",
