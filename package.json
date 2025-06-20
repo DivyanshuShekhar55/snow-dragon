@@ -47,6 +47,9 @@
     "manager",
     "store"
   ],
+  "files": [
+    "**"
+  ],
   "scripts": {
     "prebuild": "shx rm -rf dist",
     "clean": "shx rm -rf dist",
