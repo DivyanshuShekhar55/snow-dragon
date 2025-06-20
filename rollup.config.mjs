@@ -87,7 +87,7 @@ export default function (args) {
     c = "index";
   }
   return [
-    ...(c === "index" ? [createDeclarationConfig(`src/${c}.ts`, "dist")] : []),
+    // ...(c === "index" ? [createDeclarationConfig(`src/${c}.ts`, "dist")] : []),
     createCommonJSConfig(`src/${c}.js`, `dist/${c}.js`),
     createESMConfig(`src/${c}.js`, `dist/esm/${c}.mjs`),
   ];
