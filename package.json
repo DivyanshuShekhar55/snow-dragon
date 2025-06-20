@@ -12,26 +12,14 @@
   "exports": {
     "./package.json": "./package.json",
     ".": {
-      "react-native": {
-        "default": "./index.js"
-      },
-      "import": {
-        "default": "./esm/index.mjs"
-      },
-      "default": {
-        "default": "./index.js"
-      }
+      "react-native": "./index.js",
+      "import": "./esm/index.mjs",
+      "default": "./index.js"
     },
     "./*": {
-      "react-native": {
-        "default": "./*.js"
-      },
-      "import": {
-        "default": "./esm/*.mjs"
-      },
-      "default": {
-        "default": "./*.js"
-      }
+      "react-native": "./*.js",
+      "import": "./esm/*.mjs",
+      "default": "./*.js"
     }
   },
   "author": "Divyanshu Shekhar",
