@@ -1,6 +1,6 @@
 {
   "name": "snow-dragon",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "most minimal client-side state manager for vanilla-js and react projects",
   "main": "dist/index.js",
   "module": "dist/esm/index.mjs",
