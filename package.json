@@ -12,15 +12,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DivyanshuShekhar55/dragon.git"
+    "url": "git+https://github.com/DivyanshuShekhar55/snow-dragon.git"
   },
   "private": false,
   "author": "Divyanshu Shekhar",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/DivyanshuShekhar55/dragon/issues"
+    "url": "https://github.com/DivyanshuShekhar55/snow-dragon/issues"
   },
-  "homepage": "https://github.com/DivyanshuShekhar55/dragon#readme",
+  "homepage": "https://github.com/DivyanshuShekhar55/snow-dragon#readme",
   "keywords": [
     "react",
     "state",
